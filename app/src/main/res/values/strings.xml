@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AplicacionArduino</string>
+    <string name="btnAbrir">Desbloquear</string>
+    <string name="btnCerrar">Bloquear</string>
+    <string name="EstadoDelPestillo">Estado Del Pestillo:</string>
+    <string name="EstadoDeLaPuerta">Estado de la Puerta:</string>
+</resources>
