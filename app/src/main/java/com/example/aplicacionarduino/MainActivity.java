@@ -174,6 +174,5 @@ public class MainActivity extends AppCompatActivity {
 
     public void Refresh(View view){
         readJSON();
-        leerJSONpestillo();
     }
 }
