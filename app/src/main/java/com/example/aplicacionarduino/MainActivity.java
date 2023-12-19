@@ -18,7 +18,7 @@ import cz.msebera.android.httpclient.Header;
 public class MainActivity extends AppCompatActivity {
 
 
-    private static final String URL_READ = "https://api.thingspeak.com/channels/2383483/fields/2.json?api_key=CZWGMFOUVMBZO0UK&results=2";
+    private static final String URL_READ = "https://api.thingspeak.com/channels/2383483/fields/2.json?api_key=CZWGMFOUVMBZO0UK&results=1";
     private static final String URL_READ_PESTILLO = "https://api.thingspeak.com/channels/2383483/fields/1.json?api_key=CZWGMFOUVMBZO0UK&results=1";
     private TextView txt;
     private TextView txtPestillo;
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 valor = feeds.getJSONObject(i).getString("field2");
                 if (valor.toString() != "null"){
                     int valorNumerico = Integer.parseInt(valor);
-                    if (valorNumerico > 13){
+                    if (valorNumerico > 11){
                         texto = texto + "Abierto" + "\n";
                     }else {
                         texto = texto + "Cerrado" + "\n";
@@ -170,5 +170,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void Refresh(View view){
+        readJSON();
     }
 }
